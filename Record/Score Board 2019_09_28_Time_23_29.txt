@@ -1,0 +1,51 @@
+Play number 1.
+
+Player X played position number 2.
+
+  1     X     3   
+
+  4     5     6   
+
+  7     8     9   
+
+Play number 2.
+
+Player O played position number 3.
+
+  1     X     O   
+
+  4     5     6   
+
+  7     8     9   
+
+Play number 3.
+
+Player X played position number 5.
+
+  1     X     O   
+
+  4     X     6   
+
+  7     8     9   
+
+Play number 4.
+
+Player O played position number 6.
+
+  1     X     O   
+
+  4     X     O   
+
+  7     8     9   
+
+Play number 5.
+
+Player X played position number 8.
+
+  1     X     O   
+
+  4     X     O   
+
+  7     X     9   
+
+Player X won the game!Number of plays in game is 5.

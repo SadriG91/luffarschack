@@ -1,0 +1,8 @@
+Player X played the number 3 position
+Player O played the number 5 position
+Player X played the number 6 position
+Player O played the number 8 position
+Player X played the number 7 position
+Player O played the number 4 position
+Player X played the number 1 position
+Player O played the number 2 position

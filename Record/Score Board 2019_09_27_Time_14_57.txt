@@ -1,0 +1,73 @@
+  1     2     X   
+
+  4     5     6   
+
+  7     8     9   
+
+Player X played position number 3.
+
+  1     2     X   
+
+  4     5     O   
+
+  7     8     9   
+
+Player O played position number 6.
+
+  1     2     X   
+
+  4     X     O   
+
+  7     8     9   
+
+Player X played position number 5.
+
+  1     2     X   
+
+  4     X     O   
+
+  7     8     O   
+
+Player O played position number 9.
+
+  1     2     X   
+
+  4     X     O   
+
+  7     X     O   
+
+Player X played position number 8.
+
+  1     2     X   
+
+  4     X     O   
+
+  O     X     O   
+
+Player O played position number 7.
+
+  1     2     X   
+
+  X     X     O   
+
+  O     X     O   
+
+Player X played position number 4.
+
+  O     2     X   
+
+  X     X     O   
+
+  O     X     O   
+
+Player O played position number 1.
+
+  O     X     X   
+
+  X     X     O   
+
+  O     X     O   
+
+Player X played position number 2.
+
+Player X won the game!

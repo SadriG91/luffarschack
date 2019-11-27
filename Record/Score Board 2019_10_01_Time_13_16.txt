@@ -1,0 +1,92 @@
+Play number 1.
+
+Player X played position number 3.
+
+  1     2     X   
+
+  4     5     6   
+
+  7     8     9   
+
+Play number 2.
+
+Player O played position number 6.
+
+  1     2     X   
+
+  4     5     O   
+
+  7     8     9   
+
+Play number 3.
+
+Player X played position number 1.
+
+  X     2     X   
+
+  4     5     O   
+
+  7     8     9   
+
+Play number 4.
+
+Player O played position number 2.
+
+  X     O     X   
+
+  4     5     O   
+
+  7     8     9   
+
+Play number 5.
+
+Player X played position number 5.
+
+  X     O     X   
+
+  4     X     O   
+
+  7     8     9   
+
+Play number 6.
+
+Player O played position number 4.
+
+  X     O     X   
+
+  O     X     O   
+
+  7     8     9   
+
+Play number 7.
+
+Player X played position number 8.
+
+  X     O     X   
+
+  O     X     O   
+
+  7     X     9   
+
+Play number 8.
+
+Player O played position number 9.
+
+  X     O     X   
+
+  O     X     O   
+
+  7     X     O   
+
+Play number 9.
+
+Player X played position number 7.
+
+  X     O     X   
+
+  O     X     O   
+
+  X     X     O   
+
+Player X won the game!
+Number of plays in game is 9.

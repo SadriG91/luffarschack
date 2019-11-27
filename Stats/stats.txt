@@ -1,0 +1,12 @@
+Games played so far: 15.
+Number of moves played so far: 83.
+Averages plays per game: 5.533333333333333.
+Player X has won: 11 game(s).
+Player X played moves in games won: 63.
+Player O has won: 3 games(s).
+Player O played moves in games won: 20.
+Games draw: 1.
+
+   Wins  Losses  Draw  Andel Win  Andel Draw  Moves in wins  Avg plays for win
+X  11.0     3.0   1.0  73.333333    6.666667           63.0           5.727273
+O   3.0    11.0   1.0  20.000000    6.666667           63.0           6.666667

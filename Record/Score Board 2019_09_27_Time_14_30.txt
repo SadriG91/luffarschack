@@ -1,0 +1,72 @@
+ 1  2  X 
+
+ 4  5  6 
+
+ 7  8  9 
+
+Player X played the number 3 position
+
+ 1  2  X 
+
+ 4  5  6 
+
+ 7  8  O 
+
+Player O played the number 9 position
+
+ 1  2  X 
+
+ 4  5  6 
+
+ 7  X  O 
+
+Player X played the number 8 position
+
+ 1  2  X 
+
+ 4  O  6 
+
+ 7  X  O 
+
+Player O played the number 5 position
+
+ 1  2  X 
+
+ 4  O  X 
+
+ 7  X  O 
+
+Player X played the number 6 position
+
+ 1  O  X 
+
+ 4  O  X 
+
+ 7  X  O 
+
+Player O played the number 2 position
+
+ X  O  X 
+
+ 4  O  X 
+
+ 7  X  O 
+
+Player X played the number 1 position
+
+ X  O  X 
+
+ 4  O  X 
+
+ O  X  O 
+
+Player O played the number 7 position
+
+ X  O  X 
+
+ X  O  X 
+
+ O  X  O 
+
+Player X played the number 4 position
+
