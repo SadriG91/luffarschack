@@ -4,3 +4,5 @@ Knappen Show previous games öppnar mappen där programmen har sparat tidigare spe
 Jag skickar med mapparna Stats och Record men programmet kommer skapa nya i fall dem inte finns och dem skapas då i samma mapp som python filen är i.    
 Programmet är uppdelad i 2 filer Luffarschack.py och get_size.py och dem måste vara i samma mapp för att kunna köras korrekt.
 I mappen record kan vissa filer vara tomma det är för att man har kört programmet men inte spelat och därför sparas inget.
+
+Hej nu är vi klara med 2 player mode
