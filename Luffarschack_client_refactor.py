@@ -34,35 +34,52 @@ def listen_to_socket(host, port):
     print("Listening to {host}:{port}".format(host=host, port=port))
     return sock
 
-def receive_data():
+def receive_data(conn=conn):
     while True:
+        
         #if (connection_established is True and conn):
-        if (os.getenv('GAME_MODE', None) == "server"):
+        # if (os.getenv('GAME_MODE', None) == "server"):
+        try:
             data = conn.recv(1024).decode()
-        elif(os.getenv('GAME_MODE', None) == "client"):
-            data = sock.recv(1024).decode()
-        else:
-            data = sock.recv(1024).decode()
-        print(data)
+        #    except ConnectionResetError:
+        #        root.destroy()
+        #    if connection_established == False:
+        #        root.destroy()
+        # elif (os.getenv('GAME_MODE', None) == "client"):
+        #     try:
+        #         data = sock.recv(1024).decode()
+        except ConnectionResetError:
+            root.destroy()
+        if data == "" or data == "exit":
+            connection_established=False
+            messagebox.showerror("Andra spelaren är hoppat av")
+            break
+    # else:
+    #     data = sock.recv(1024).decode()
+
+    
         data_split = data.split('-')
         received_position = int(data_split[0])
-        received_player = str(data_split[1])
-        if received_player != app.player:
-            blocked_buttons = app.buttons
-            for button in blocked_buttons:
-                button.config(state=tk.DISABLED)
-        else:
-            pass
+        received_player = str(data_split[1])        
         app.mark_button(received_position, received_player)
+        # while os.getenv('GAME_MODE', None) == "client":
+        #     if received_player == "O":
+        #         blocked_buttons = app.buttons
+        #         for button in blocked_buttons:
+        #             button.config(state=tk.DISABLED)
+        #     elif received_player == app.player:
+        #             blocked_buttons = app.buttons
+        #             for button in blocked_buttons:
+        #                 button.config(state=tk.ACTIVE)
+        
 
 
-
-def waiting_for_connection():
+def waiting_for_connection(sock):
     global connection_established, conn, addr
     conn, addr = sock.accept() #wait for connection, blocking method
     print("Client has joined succesfully!")
     connection_established = True
-    receive_data()
+    receive_data(conn=conn)
 
 
 received_position = None
@@ -72,12 +89,12 @@ received_player = None
 
 if (os.getenv('GAME_MODE', None) == "client"):
     sock = connect_to_socket(host, port)
-    t = threading.Thread(target=receive_data)
+    t = threading.Thread(target=receive_data, args=(sock,))
     t.daemon = True
     t.start()
 elif (os.getenv('GAME_MODE', None) == "server"):
     sock = listen_to_socket(host, port)
-    t = threading.Thread(target=waiting_for_connection)
+    t = threading.Thread(target=waiting_for_connection, args=(sock,))
     t.daemon = True
     t.start()
 else:
@@ -123,8 +140,8 @@ class luffarschackApp(tk.Frame):
                 win_game=True
                 messagebox.showinfo("Game Over", "Player {} won the game".format(self.player))         
                 root.destroy()
-
-            if is_draw(self.board) and win_game == False:
+            
+            elif is_draw(self.board) and win_game == False:
                 messagebox.showinfo("Game Over", "It's a draw!")
                 root.destroy()
             
@@ -133,6 +150,13 @@ class luffarschackApp(tk.Frame):
 
 
     def client_exit(self):
+        if (os.getenv('GAME_MODE', None) == "client"): 
+            if connection_established == True:
+                sock.send("exit".encode())
+            
+        if (os.getenv('GAME_MODE', None) == "server"):
+            if connection_established == True:
+                conn.send("exit".encode())
         exit()
 
 
