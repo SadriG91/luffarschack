@@ -47,7 +47,7 @@ def receive_data():
         data_split = data.split('-')
         received_position = int(data_split[0])
         received_player = str(data_split[1])
-        if received_player == app.player:
+        if received_player != app.player:
             blocked_buttons = app.buttons
             for button in blocked_buttons:
                 button.config(state=tk.DISABLED)
